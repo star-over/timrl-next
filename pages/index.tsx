@@ -1,13 +1,11 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
+import HandPart from '../components/HandPart';
 
 const Home: NextPage = () => {
   return (
     <div>
-      <h1 className='font-bold text-xl'>
-        index
-      </h1>
+      <h1 className='font-bold text-xl'>timrl site</h1>
+      <HandPart side='RIGHT' part='PM' state='ERROR'/>
     </div>
   );
 };
