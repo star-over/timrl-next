@@ -3,7 +3,7 @@ import { F0svg, F1svg, F2svg, F3svg, F4svg, PMsvg } from '../assets/svg';
 import { IHandPartProps } from '../interfaces/interface';
 import cn from 'classnames';
 
-const HandPart: FC<IHandPartProps> = ({ part, side, state }) => {
+const HandPart: FC<IHandPartProps> = ({ side, part, state }) => {
   const handParts = {
     F0: F0svg,
     F1: F1svg,

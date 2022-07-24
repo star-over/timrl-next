@@ -7,3 +7,7 @@ export interface IHandPartProps {
   part: handPart;
   state: partState;
 };
+export interface IHandProps {
+  side: handSide;
+  parts: [{}]
+}
