@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import HandPart from '../components/HandPart';
+import  HandPart  from '../components/HandPart';
 
 const Home: NextPage = () => (
   <div>
