@@ -10,15 +10,20 @@ const HandPart: FC<IHandPartProps> = ({ side, part, state }) => {
     F2: F2svg,
     F3: F3svg,
     F4: F4svg,
-    PM: PMsvg
+    PM: PMsvg,
   };
+
   const stateClasses = {
     ACTIVE: 'fill-slate-500',
     INACTIVE: 'fill-slate-200',
     ERROR: 'fill-slate-900',
-    HIDE: 'fill-slate-100'
+    HIDE: 'fill-slate-100',
   };
-  const classes = cn('max-h-20', stateClasses[state], { '-scale-x-100': side === 'RIGHT' });
+
+  const classes = cn('max-h-20', stateClasses[state], {
+    '-scale-x-100': side === 'RIGHT',
+  });
+
   const Tag = handParts[part];
 
   return <Tag className={classes} />;

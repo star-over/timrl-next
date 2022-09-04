@@ -1,11 +1,3 @@
-
-
-const Hand = () => {
-  return (
-    <>
-
-    </>
-  );
-};
+const Hand = () => <></>;
 
 export default Hand;
