@@ -1,14 +1,8 @@
-import type { NextPage } from 'next';
-import  HandPart  from '../components/HandPart';
+import type { NextPage } from "next";
 
 const Home: NextPage = () => (
   <div>
-    <h1 className='font-bold text-xl'>timrl site</h1>
-    <HandPart
-      side='RIGHT'
-      part='PM'
-      state='ERROR'
-    />
+    <h1 className="font-bold text-xl">timrl site</h1>
   </div>
 );
 
