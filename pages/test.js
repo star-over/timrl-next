@@ -1,15 +1,15 @@
 import { Hand } from "../components/Hand";
-import { IHandSide, IPartState } from "../interfaces/interface";
+import { ISide, IPartState } from "../interfaces/interface";
 
 const testPage = () => {
   return (
     <>
       <Hand
-        side={IHandSide.LEFT}
+        side={ISide.LEFT}
         state={{ F1: IPartState.ACTIVE, F5: IPartState.ERROR }}
       />
       <Hand
-        side={IHandSide.RIGHT}
+        side={ISide.RIGHT}
         state={{ F1: IPartState.ACTIVE, F2: IPartState.ERROR, F3: IPartState.INACTIVE }}
       />
     </>
