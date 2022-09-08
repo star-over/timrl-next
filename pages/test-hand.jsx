@@ -1,7 +1,7 @@
 import { Hand } from "../components/Hand";
 import { ISide, IPartState } from "../interfaces/interface";
 
-const testButtonPage = () => {
+const testHandPage = () => {
   return (
     <>
       <Hand
@@ -16,4 +16,4 @@ const testButtonPage = () => {
   );
 };
 
-export default testButtonPage;
+export default testHandPage;

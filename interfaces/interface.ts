@@ -12,3 +12,7 @@ export type IHandProps = {
   side: ISide;
   state: IHandState;
 };
+export type IButtonProps = {
+  symbol: string;
+  state: IPartState;
+}

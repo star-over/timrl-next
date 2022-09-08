@@ -1,11 +1,13 @@
 import cn from "classnames";
-import { NextPage } from "next/types";
 import { IHandState, IPart, IPartState, IHandProps, ISide } from "../interfaces/interface";
 
 const fillState = (state: IPartState) => (Object.keys(IPart) as [IPart])
-  .reduce((acc, key) => ((acc[key] = state), acc), {} as IHandState);
+  .reduce((acc, key) => {
+    acc[key] = state;
+    return acc
+  }, {} as IHandState);
 
-const makePartsClasses = (partStates:IHandState) => {
+const makePartsClasses = (partStates: IHandState) => {
   const stateMapping: { [key in IPartState]: string } = {
     ACTIVE: "fill-slate-500",
     INACTIVE: "fill-orange-100",
@@ -30,13 +32,14 @@ const makePartsClasses = (partStates:IHandState) => {
     }, {} as { [key in IPart]: string });
 }
 
-export const Hand: NextPage<IHandProps> = (props) => {
-  const state: IHandState = { ...fillState(IPartState.HIDE), ...props.state };
+// eslint-disable-next-line import/prefer-default-export
+export const Hand = ({ state: propState, side }: IHandProps) => {
+  const state: IHandState = { ...fillState(IPartState.HIDE), ...propState };
 
   const partsCl = makePartsClasses(state);
 
   const svgCl = cn("w-[281px]", {
-    "-scale-x-100": props.side === ISide.RIGHT,
+    "-scale-x-100": side === ISide.RIGHT,
   });
 
   return (

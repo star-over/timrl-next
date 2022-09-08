@@ -25,7 +25,8 @@ module.exports = {
   },
   plugins: ["react", "@typescript-eslint", "prettier"],
   rules: {
-    // 'prettier/prettier': 0,
+    "prettier/prettier": 0,
+    "import/prefer-default-export": 0,
     "import/order": 0,
     "react/react-in-jsx-scope": 0,
     "react/jsx-no-useless-fragment": 0,
