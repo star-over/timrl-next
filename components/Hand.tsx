@@ -2,7 +2,7 @@ import cn from "classnames";
 import { NextPage } from "next/types";
 import { IHandState, IPart, IPartState, IHandProps, ISide } from "../interfaces/interface";
 
-const fillState = (state: IPartState) => Object.keys(IPart)
+const fillState = (state: IPartState) => (Object.keys(IPart) as [IPart])
   .reduce((acc, key) => ((acc[key] = state), acc), {} as IHandState);
 
 const makePartsClasses = (partStates:IHandState) => {
@@ -21,7 +21,7 @@ const makePartsClasses = (partStates:IHandState) => {
     PM: "fill-orange-50",
   };
 
-  return Object.entries(partStates)
+  return (Object.entries(partStates) as [[IPart, IPartState]])
     .reduce((acc, [part, state]) => {
       acc[part] = state === IPartState.ACTIVE
         ? activeMapping[part]
