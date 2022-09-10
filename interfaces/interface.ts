@@ -13,6 +13,6 @@ export type IHandProps = {
   state: IHandState;
 };
 export type IButtonProps = {
-  symbol: string;
-  state: IPartState;
+  symbol?: string;
+  state?: IPartState;
 }

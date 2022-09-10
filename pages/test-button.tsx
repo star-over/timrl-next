@@ -1,5 +1,5 @@
 import { Button } from "../components/Button";
-import { ISide, IPartState } from "../interfaces/interface";
+import { IPartState } from "../interfaces/interface";
 
 const testButtonPage = () => (
   <div>
