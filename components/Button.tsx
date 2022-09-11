@@ -13,7 +13,7 @@ export const Button = ({ state: propState, symbol: propSymbol }: IButtonProps) =
 
   return (
     <>
-      <div className="relative w-10 m-3">
+      <div className="relative w-10">
         <div className="absolute inset-0 font-mono text-center align-text-bottom text-2xl">
           <span className={stateMapping[state].symbol}>
             {symbol}
