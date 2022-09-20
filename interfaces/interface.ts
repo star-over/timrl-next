@@ -15,6 +15,7 @@ export type IHandProps = {
 export type IButtonProps = {
   symbol?: string;
   state?: IPartState;
+  isHome?: boolean;
 }
 
 export const IFingers = {

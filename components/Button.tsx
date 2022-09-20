@@ -1,39 +1,21 @@
-import { IButtonProps, IPartState } from '../interfaces/interface';
+import { IButtonProps, IPartState } from "../interfaces/interface";
+import { FC } from "react";
 
 const stateMapping = {
-  ACTIVE: { bg: "fill-green-50", symbol: "text-green-800", frame: "fill-stone-500"},
-  INACTIVE: { bg: "fill-zinc-100", symbol: "text-zinc-500", frame: "fill-stone-400"},
-  ERROR: { bg: "fill-red-300", symbol: "text-red-900", frame: "fill-stone-500"},
-  HIDE: { bg: "fill-zinc-100", symbol: "text-zinc-200", frame: "fill-stone-200"},
+  ACTIVE: { bg: "bg-green-50", symbol: "text-green-800", frame: "border-stone-500" },
+  INACTIVE: { bg: "bg-zinc-100", symbol: "text-zinc-500", frame: "border-stone-400" },
+  ERROR: { bg: "bg-red-300", symbol: "text-red-900", frame: "border-stone-500" },
+  HIDE: { bg: "bg-zinc-100", symbol: "text-zinc-200", frame: "border-stone-200" },
 };
 
-export const Button = ({ state = IPartState.HIDE, symbol = '.' }: IButtonProps) => {
-  return (
-    <>
-      <div className="relative w-10">
-        <div className="absolute inset-0 font-mono text-center align-text-bottom text-2xl">
-          <span className={stateMapping[state].symbol}>
-            {symbol}
-          </span>
-        </div>
-
-        <svg
-          viewBox="0 0 40 40"
-        >
-          <rect
-            width="40"
-            height="40"
-            className={stateMapping[state].bg}
-            // fillOpacity=".8"
-            rx="8"
-          />
-          <path
-            className={stateMapping[state].frame}
-            fillRule="evenodd"
-            d="M8 0a8 8 0 0 0-8 8v24a8 8 0 0 0 8 8h24a8 8 0 0 0 8-8V8a8 8 0 0 0-8-8H8Zm1 2a7 7 0 0 0-7 7v19a7 7 0 0 0 7 7h22a7 7 0 0 0 7-7V9a7 7 0 0 0-7-7H9Z"
-          />
-        </svg>
-      </div>
-    </>
-  );
+export const Button: FC<IButtonProps> = ({ state = IPartState.HIDE, symbol = ".", isHome= false}) => {
+  return <>
+    <div
+      className={`flex flex-none justify-center items-center rounded-lg w-10 h-10
+      ${stateMapping[state].bg} ${stateMapping[state].frame} border-4`}
+    >
+      <span className={`fixed text-2xl ${stateMapping[state].symbol}`}>{symbol}</span>
+      {isHome && <span className="fixed text-2xl text-gray-400/50 ">_</span>}
+    </div>
+  </>;
 };
