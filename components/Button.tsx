@@ -5,7 +5,8 @@ const stateMapping = {
   ACTIVE: { bg: "bg-green-50", symbol: "text-green-800", frame: "border-stone-500" },
   INACTIVE: { bg: "bg-zinc-100", symbol: "text-zinc-500", frame: "border-stone-400" },
   ERROR: { bg: "bg-red-300", symbol: "text-red-900", frame: "border-stone-500" },
-  HIDE: { bg: "bg-zinc-100", symbol: "text-zinc-200", frame: "border-stone-200" },
+// TODO rename 'hide' mode to invisible
+  HIDE: { bg: "invisible", symbol: "", frame: "" },
 };
 
 export const Button: FC<IButtonProps> = ({ state = IPartState.HIDE, symbol = ".", isHome= false}) => {
