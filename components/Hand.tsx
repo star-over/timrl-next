@@ -1,8 +1,8 @@
 import cn from "classnames";
-import { IHandState, IPart, IPartState, IHandProps, ISide } from "../interfaces/interface";
+import {IHandProps, IHandState, IPart, IPartState, ISide} from "../interfaces/interface";
 
 const fillState = (state: IPartState) => (Object.keys(IPart) as [IPart])
-  .reduce((acc, key) => {
+  .reduce((acc: IHandState, key: IPart) => {
     acc[key] = state;
     return acc
   }, {} as IHandState);
@@ -42,7 +42,7 @@ export const Hand = ({ state: propState, side }: IHandProps) => {
     "-scale-x-100": side === ISide.RIGHT,
   });
 
-  return (
+  return <>
     <svg
       className={svgCl}
       viewBox="0 0 281 321"
@@ -78,5 +78,5 @@ export const Hand = ({ state: propState, side }: IHandProps) => {
         d="M57.8 137.3c13.4 0 77 2.7 88.8 7.4 23 9 30.2 24.7 23.3 48.4a95 95 0 0 0-1.7 42c.4 4.1.6 5.2.5 9.4-.5 14.4-9.6 30.7-14.5 44.2-5.9 16.2-12.7 28.9-31.6 31.2l-25.5.3-21.2-2.9c-34.4-6.2-64.3-14.9-75-52.7-.7-6.9-.4-12.8.7-20.3l.6-3.8c4.2-24 8.8-47.9 12.5-72 2.6-16.5 12.3-25.4 27.7-29.1 5-1.2 10.2-1.6 15.4-2.1Z"
       />
     </svg>
-  );
+  </>;
 };

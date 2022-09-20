@@ -7,10 +7,7 @@ const stateMapping = {
   HIDE: { bg: "fill-zinc-100", symbol: "text-zinc-200", frame: "fill-stone-200"},
 };
 
-export const Button = ({ state: propState, symbol: propSymbol }: IButtonProps) => {
-  const state: IPartState = propState ?? IPartState.HIDE;
-  const symbol: string = propSymbol ?? ".";
-
+export const Button = ({ state = IPartState.HIDE, symbol = '.' }: IButtonProps) => {
   return (
     <>
       <div className="relative w-10">
