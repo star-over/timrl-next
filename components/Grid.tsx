@@ -4,8 +4,8 @@ import { Button } from "./Button";
 import { keyCodes } from "../shared/key-codes"
 
 export const Grid = () => {
-  const rowCl = "inline-flex flex-nowrap gap-1 bg-slate-200 overflow-clip";
-  const keyCl = "bg-red-100"
+  const rowCl = "inline-flex flex-nowrap bg-slate-200 overflow-clip";
+  const keyCl = "flex items-stretch bg-red-100 w-10 h-10 "
   const layout = {
     [IVirtualKey.KeyA]: "A",
     [IVirtualKey.KeyB]: "B",
@@ -30,10 +30,10 @@ export const Grid = () => {
         <div className={keyCl}><Button symbol="0" state={IPartState.INACTIVE} /></div>
         <div className={keyCl}><Button symbol="-" state={IPartState.INACTIVE} /></div>
         <div className={keyCl}><Button symbol="=" state={IPartState.INACTIVE} /></div>
-        <div className="bg-zinc-300 w-16" />
+        <div className="bg-zinc-300 basis-16" />
       </div>
       <div className={rowCl}>
-        <div className="bg-zinc-300 w-16" />
+        <div className="bg-zinc-300 basis-16" />
         <div className={keyCl}><Button symbol="q" state={IPartState.INACTIVE} /></div>
         <div className={keyCl}><Button symbol="w" state={IPartState.INACTIVE} /></div>
         <div className={keyCl}><Button symbol="e" state={IPartState.INACTIVE} /></div>
@@ -49,7 +49,7 @@ export const Grid = () => {
         <div className={keyCl}><Button symbol="\" state={IPartState.INACTIVE} /></div>
       </div>
       <div className={rowCl}>
-        <div className="bg-zinc-300 w-19" />
+        <div className="bg-zinc-300 basis-18" />
         <div className={keyCl}><Button symbol="a" state={IPartState.INACTIVE} /></div>
         <div className={keyCl}><Button symbol="s" state={IPartState.INACTIVE} /></div>
         <div className={keyCl}><Button symbol="d" state={IPartState.INACTIVE} /></div>
@@ -64,7 +64,7 @@ export const Grid = () => {
         <div className="bg-zinc-300 w-18" />
       </div>
       <div className={rowCl}>
-        <div className="bg-zinc-300 w-24" />
+        <div className="bg-zinc-300 w-22" />
         <div className={keyCl}><Button symbol="z" state={IPartState.INACTIVE} /></div>
         <div className={keyCl}><Button symbol="x" state={IPartState.INACTIVE} /></div>
         <div className={keyCl}><Button symbol="c" state={IPartState.INACTIVE} /></div>
@@ -82,8 +82,8 @@ export const Grid = () => {
         <div className={keyCl}><Button /></div>
         <div className={keyCl}><Button /></div>
         <div className="bg-zinc-300 w-12" />
-        <div className="bg-zinc-300 w-56" />
-        <div className="bg-zinc-300 w-12" />
+        <div className="bg-zinc-500 w-50" />
+        <div className="bg-zinc-300 w-14" />
         <div className={keyCl}><Button /></div>
         <div className={keyCl}><Button /></div>
         <div className={keyCl}><Button /></div>
