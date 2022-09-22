@@ -18,11 +18,13 @@ export interface IButtonProps {
 export const Button: FC<IButtonProps> = ({ state = IPartState.HIDE, symbol = ".", isHome= false}) => {
   return <>
     <div
-      className={`flex flex-none flex-grow justify-center rounded-lg
+      className={`flex flex-grow justify-center rounded-lg
       ${stateMapping[state].bg} ${stateMapping[state].frame} border-2`}
     >
-      <span className={`text-xl ${stateMapping[state].symbol}`}>{symbol}</span>
-      {isHome && <span className="fixed text-2xl text-gray-400/50 ">_</span>}
+      <span className={`text-2xl ${stateMapping[state].symbol}`}>{symbol}</span>
+      {/* now home dash is glued to top, but need to drop it to bottom */}
+      {isHome && <div className="fixed w-4 h-8 border-b-4 border-gray-400/50" />}
+      {/* {isHome && <span className="fixed text-2xl text-gray-400/50 ">_</span>} */}
     </div>
   </>;
 };
