@@ -1,5 +1,5 @@
 import { IPartState } from "../interfaces/interface";
-import { IVirtualKey } from "../interfaces/virtual-key";
+import { IK6dKey } from "../interfaces/virtual-key";
 import { Button } from "./Button";
 import { keyCodes } from "../shared/key-codes"
 
@@ -7,11 +7,11 @@ export const Grid = () => {
   const rowCl = "inline-flex flex-nowrap bg-slate-200 overflow-clip";
   const keyCl = "flex items-stretch bg-red-100 w-10 h-10 "
   const layout = {
-    [IVirtualKey.KeyA]: "A",
-    [IVirtualKey.KeyB]: "B",
-    [IVirtualKey.KeyC]: "C",
-    [IVirtualKey.KeyD]: "D",
-    [IVirtualKey.KeyE]: "E",
+    [IK6dKey.KeyA]: "A",
+    [IK6dKey.KeyB]: "B",
+    [IK6dKey.KeyC]: "C",
+    [IK6dKey.KeyD]: "D",
+    [IK6dKey.KeyE]: "E",
   }
 
   return (<>

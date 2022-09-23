@@ -1,11 +1,12 @@
-export enum IVirtualKey {
+
+export enum IK6dKey {
   AltLeft = "AltLeft",
   AltRight = "AltRight",
   ArrowDown = "ArrowDown",
   ArrowLeft = "ArrowLeft",
   ArrowRight = "ArrowRight",
   ArrowUp = "ArrowUp",
-  Backquote = "Backquote",
+  Backquote = "Backquote", // `~
   Backslash = "Backslash",
   Backspace = "Backspace",
   BracketLeft = "BracketLeft",
@@ -118,6 +119,7 @@ export enum IVirtualKey {
   ScrollLock = "ScrollLock",
   Semicolon = "Semicolon",
   ShiftLeft = "ShiftLeft",
+  ShiftRight = "ShiftRight",
   Slash = "Slash",
   Space = "Space",
   Tab = "Tab",
@@ -126,4 +128,9 @@ export enum IVirtualKey {
   VolumeMute = "VolumeMute",
   VolumeUp = "VolumeUp",
   WakeUp = "WakeUp",
+}
+
+export const  IK6dModifiers = {
+  shift: [IK6dKey.ShiftLeft, IK6dKey.ShiftRight],
+
 }
