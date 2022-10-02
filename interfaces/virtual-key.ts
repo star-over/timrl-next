@@ -1,5 +1,5 @@
 
-export enum IK6dKey {
+export enum IKbdKey {
   AltLeft = "AltLeft",
   AltRight = "AltRight",
   ArrowDown = "ArrowDown",
@@ -130,7 +130,7 @@ export enum IK6dKey {
   WakeUp = "WakeUp",
 }
 
-export const  IK6dModifiers = {
-  shift: [IK6dKey.ShiftLeft, IK6dKey.ShiftRight],
+export const  IKbdModifiers = {
+  shift: [IKbdKey.ShiftLeft, IKbdKey.ShiftRight],
 
 }

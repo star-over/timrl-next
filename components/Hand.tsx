@@ -1,5 +1,5 @@
 import cn from "classnames";
-import {IHandProps, IHandState, IPart, IPartState, ISide} from "../interfaces/interface";
+import { IHandState, IPart, IPartState, ISide} from "../interfaces/interface";
 
 const fillState = (state: IPartState) => (Object.keys(IPart) as [IPart])
   .reduce((acc: IHandState, key: IPart) => {
@@ -32,6 +32,7 @@ const makePartsClasses = (partStates: IHandState) => {
     }, {} as { [key in IPart]: string });
 }
 
+type IHandProps = { side: ISide; state: IHandState; };
 // eslint-disable-next-line import/prefer-default-export
 export const Hand = ({ state: propState, side }: IHandProps) => {
   const state: IHandState = { ...fillState(IPartState.HIDE), ...propState };
