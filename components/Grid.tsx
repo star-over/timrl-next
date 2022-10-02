@@ -1,33 +1,35 @@
 import { IPartState } from "../interfaces/interface";
 import { Button } from "./Button";
-import {IKbdLayout, IKbdLayoutItem, us} from "../data/kbdLayot";
-import {en, ILngLayout, ILngLayoutItem, toLngObject} from "../data/lngLayout";
+import { IKbdLayout, IKbdLayoutItem, us } from "../data/kbdLayot";
+import { en, ILngLayout } from "../data/lngLayout";
+import cm from "classnames"
 import _ from "lodash";
 
 const rowClass = "inline-flex flex-nowrap bg-slate-200 overflow-clip";
-const keyClass = "flex items-stretch bg-red-100 w-10 h-10 "
+const keyClass = "flex items-stretch bg-red-100 w-10 h-10"
 
 const makeGrid = (kbdLayout: IKbdLayout, lngLayout: ILngLayout ) => {
-  // const lngObj = toLngObject(lngLayout);
-  const lngObj = _(lngLayout)
+  const lngIndex = _(lngLayout)
     .filter(e => !e.shift)
     .keyBy(e => e.kbdKey)
     .value();
-  const makeRow = (rowArr: IKbdLayoutItem[]) => {
-    return rowArr.map(item => (
-      <div className={keyClass} key={item.kbdKey}>
-        <Button symbol={lngObj[item.kbdKey].symbol} state={IPartState.INACTIVE} />
+
+  const makeRow = (keys: IKbdLayoutItem[]) =>
+    keys.map(({ kbdKey, isHome, css="" }) => {
+      return (
+        <div className={`${keyClass} ${css}`} key={kbdKey}>
+          <Button symbol={lngIndex[kbdKey]?.symbol} state={IPartState.INACTIVE} isHome={isHome}/>
+        </div>
+      );
+    });
+
+  const makeRows = (layout: IKbdLayout) => {
+    return layout.map((rows) => (
+      <div className={rowClass}>
+        {makeRow(rows)}
       </div>
     ))
   };
-
-  const makeRows = (layout: IKbdLayout) => {
-    return layout.map((rowArr) => (
-      <div className={rowClass}>
-        {makeRow(rowArr)}
-      </div>
-    ))
-  }
 
   return makeRows(kbdLayout);
 }
@@ -50,10 +52,10 @@ export const Grid = () => {
         <div className={keyClass}><Button symbol="0" state={IPartState.INACTIVE} /></div>
         <div className={keyClass}><Button symbol="-" state={IPartState.INACTIVE} /></div>
         <div className={keyClass}><Button symbol="=" state={IPartState.INACTIVE} /></div>
-        <div className="bg-zinc-300 basis-16" />
+        <div className="bg-zinc-300 w-16" />
       </div>
       <div className={rowClass}>
-        <div className="bg-zinc-300 basis-16" />
+        <div className="bg-zinc-300 w-16" />
         <div className={keyClass}><Button symbol="q" state={IPartState.INACTIVE} /></div>
         <div className={keyClass}><Button symbol="w" state={IPartState.INACTIVE} /></div>
         <div className={keyClass}><Button symbol="e" state={IPartState.INACTIVE} /></div>
@@ -69,7 +71,7 @@ export const Grid = () => {
         <div className={keyClass}><Button symbol="\" state={IPartState.INACTIVE} /></div>
       </div>
       <div className={rowClass}>
-        <div className="bg-zinc-300 basis-18" />
+        <div className="bg-zinc-300 w-18" />
         <div className={keyClass}><Button symbol="a" state={IPartState.INACTIVE} /></div>
         <div className={keyClass}><Button symbol="s" state={IPartState.INACTIVE} /></div>
         <div className={keyClass}><Button symbol="d" state={IPartState.INACTIVE} /></div>

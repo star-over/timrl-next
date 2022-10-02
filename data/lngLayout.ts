@@ -10,7 +10,26 @@ export const toLngObject = (lngLayout: ILngLayout) => {
   }, {} as { [key in IKbdKey]: ILngLayoutItem });
 };
 
+
 export const en:ILngLayout = [
+
+  { kbdKey: IKbdKey.Tab, symbol: "tab", shift: false },
+  { kbdKey: IKbdKey.Backspace, symbol: "del", shift: false },
+  { kbdKey: IKbdKey.CapsLock, symbol: "caps", shift: false },
+  { kbdKey: IKbdKey.Enter, symbol: "enter", shift: false },
+  { kbdKey: IKbdKey.ShiftLeft, symbol: "shift", shift: false },
+  { kbdKey: IKbdKey.ShiftRight, symbol: "shift", shift: false },
+  { kbdKey: IKbdKey.Fn, symbol: "Fn", shift: false },
+  { kbdKey: IKbdKey.ControlLeft, symbol: "ctrl", shift: false },
+  { kbdKey: IKbdKey.AltLeft, symbol: "alt", shift: false },
+  { kbdKey: IKbdKey.MetaLeft, symbol: "mt", shift: false },
+  { kbdKey: IKbdKey.Space, symbol: "space", shift: false },
+  { kbdKey: IKbdKey.AltRight, symbol: "alt", shift: false },
+  { kbdKey: IKbdKey.MetaRight, symbol: "mt", shift: false },
+  { kbdKey: IKbdKey.ArrowLeft, symbol: "<", shift: false },
+  { kbdKey: IKbdKey.ArrowUp, symbol: "^", shift: false },
+  { kbdKey: IKbdKey.ArrowRight, symbol: ">", shift: false },
+
   { kbdKey: IKbdKey.Backquote, symbol: "`", shift: false },
   { kbdKey: IKbdKey.Digit1, symbol: "1", shift: false },
   { kbdKey: IKbdKey.Digit2, symbol: "2", shift: false },

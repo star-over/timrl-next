@@ -1,5 +1,6 @@
 
 export enum IKbdKey {
+  Fn = "Fn",
   AltLeft = "AltLeft",
   AltRight = "AltRight",
   ArrowDown = "ArrowDown",

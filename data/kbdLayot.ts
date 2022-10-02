@@ -1,7 +1,7 @@
 import {IKbdKey} from "../interfaces/virtual-key";
 
 
-export interface IKbdLayoutItem { kbdKey: IKbdKey }
+export interface IKbdLayoutItem { kbdKey: IKbdKey,  isHome?: true, css?: string }
 export type IKbdLayout = IKbdLayoutItem[][];
 
 export const us: IKbdLayout = [
@@ -19,7 +19,9 @@ export const us: IKbdLayout = [
     { kbdKey: IKbdKey.Digit0 },
     { kbdKey: IKbdKey.Minus },
     { kbdKey: IKbdKey.Equal },
-  ],[
+    { kbdKey: IKbdKey.Backspace, css: "w-16 text-xs" },
+  ], [
+    { kbdKey: IKbdKey.Tab, css: "w-16"},
     { kbdKey: IKbdKey.KeyQ },
     { kbdKey: IKbdKey.KeyW },
     { kbdKey: IKbdKey.KeyE },
@@ -34,18 +36,21 @@ export const us: IKbdLayout = [
     { kbdKey: IKbdKey.BracketRight },
     { kbdKey: IKbdKey.Backslash },
   ], [
+    { kbdKey: IKbdKey.CapsLock, css: "w-18" },
     { kbdKey: IKbdKey.KeyA },
     { kbdKey: IKbdKey.KeyS },
     { kbdKey: IKbdKey.KeyD },
-    { kbdKey: IKbdKey.KeyF },
+    { kbdKey: IKbdKey.KeyF, isHome: true },
     { kbdKey: IKbdKey.KeyG },
     { kbdKey: IKbdKey.KeyH },
-    { kbdKey: IKbdKey.KeyJ },
+    { kbdKey: IKbdKey.KeyJ, isHome: true},
     { kbdKey: IKbdKey.KeyK },
     { kbdKey: IKbdKey.KeyL },
     { kbdKey: IKbdKey.Semicolon },
     { kbdKey: IKbdKey.Quote },
-  ],[
+    { kbdKey: IKbdKey.Enter, css: "w-18" },
+  ], [
+    { kbdKey: IKbdKey.ShiftLeft, css: "w-22" },
     { kbdKey: IKbdKey.KeyZ },
     { kbdKey: IKbdKey.KeyX },
     { kbdKey: IKbdKey.KeyC },
@@ -56,5 +61,19 @@ export const us: IKbdLayout = [
     { kbdKey: IKbdKey.Comma },
     { kbdKey: IKbdKey.Period },
     { kbdKey: IKbdKey.Slash },
+    { kbdKey: IKbdKey.ShiftRight, css: "w-24" },
+  ], [
+    { kbdKey: IKbdKey.Fn},
+    { kbdKey: IKbdKey.ControlLeft },
+    { kbdKey: IKbdKey.AltLeft},
+    { kbdKey: IKbdKey.MetaLeft, css: "w-12" },
+
+    { kbdKey: IKbdKey.Space, css: "w-50" },
+
+    { kbdKey: IKbdKey.MetaRight, css: "w-14" },
+    { kbdKey: IKbdKey.AltRight },
+    { kbdKey: IKbdKey.ArrowLeft },
+    { kbdKey: IKbdKey.ArrowUp },
+    { kbdKey: IKbdKey.ArrowRight },
   ],
 ];
