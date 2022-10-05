@@ -21,9 +21,8 @@ export const Button: FC<IButtonProps> = ({ state = IPartState.HIDE, symbol = "."
       className={`flex flex-grow justify-center rounded-lg
       ${stateMapping[state].bg} ${stateMapping[state].frame} border-2`}
     >
-      <span className={`text-2xl ${stateMapping[state].symbol}`}>{symbol}</span>
+      <span className={`${stateMapping[state].symbol}`}>{symbol}</span>
       {isHome && <div className="fixed self-end w-3 h-1.5 border-t-2 border-gray-400/50" />}
-      {/* {isHome && <span className="fixed text-2xl text-gray-400/50 ">_</span>} */}
     </div>
   </>;
 };

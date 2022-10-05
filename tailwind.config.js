@@ -2,6 +2,8 @@ module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
+    './data/**/*.{js,ts,jsx,tsx}',
+    './shared/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -13,7 +15,6 @@ module.exports = {
         '22': '5.5rem',
         '50': '12.5rem',
         '52': '13.0rem',
-
       }
     },
   },

@@ -6,7 +6,7 @@ import cm from "classnames"
 import _ from "lodash";
 
 const rowClass = "inline-flex flex-nowrap bg-slate-200 overflow-clip";
-const keyClass = "flex items-stretch bg-red-100 w-10 h-10"
+const keyClass = "flex items-stretch bg-red-100 text-2xl w-10 h-10"
 
 const makeGrid = (kbdLayout: IKbdLayout, lngLayout: ILngLayout ) => {
   const lngIndex = _(lngLayout)

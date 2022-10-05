@@ -19,9 +19,9 @@ export const us: IKbdLayout = [
     { kbdKey: IKbdKey.Digit0 },
     { kbdKey: IKbdKey.Minus },
     { kbdKey: IKbdKey.Equal },
-    { kbdKey: IKbdKey.Backspace, css: "w-16 text-xs" },
+    { kbdKey: IKbdKey.Backspace, css: "w-16  text-base" },
   ], [
-    { kbdKey: IKbdKey.Tab, css: "w-16"},
+    { kbdKey: IKbdKey.Tab, css: "w-16  text-base"},
     { kbdKey: IKbdKey.KeyQ },
     { kbdKey: IKbdKey.KeyW },
     { kbdKey: IKbdKey.KeyE },
@@ -36,7 +36,7 @@ export const us: IKbdLayout = [
     { kbdKey: IKbdKey.BracketRight },
     { kbdKey: IKbdKey.Backslash },
   ], [
-    { kbdKey: IKbdKey.CapsLock, css: "w-18" },
+    { kbdKey: IKbdKey.CapsLock, css: "w-18  text-base" },
     { kbdKey: IKbdKey.KeyA },
     { kbdKey: IKbdKey.KeyS },
     { kbdKey: IKbdKey.KeyD },
@@ -48,9 +48,9 @@ export const us: IKbdLayout = [
     { kbdKey: IKbdKey.KeyL },
     { kbdKey: IKbdKey.Semicolon },
     { kbdKey: IKbdKey.Quote },
-    { kbdKey: IKbdKey.Enter, css: "w-18" },
+    { kbdKey: IKbdKey.Enter, css: "w-18  text-base" },
   ], [
-    { kbdKey: IKbdKey.ShiftLeft, css: "w-22" },
+    { kbdKey: IKbdKey.ShiftLeft, css: "w-22  text-base" },
     { kbdKey: IKbdKey.KeyZ },
     { kbdKey: IKbdKey.KeyX },
     { kbdKey: IKbdKey.KeyC },
@@ -61,14 +61,14 @@ export const us: IKbdLayout = [
     { kbdKey: IKbdKey.Comma },
     { kbdKey: IKbdKey.Period },
     { kbdKey: IKbdKey.Slash },
-    { kbdKey: IKbdKey.ShiftRight, css: "w-24" },
+    { kbdKey: IKbdKey.ShiftRight, css: "w-24  text-base" },
   ], [
-    { kbdKey: IKbdKey.Fn},
-    { kbdKey: IKbdKey.ControlLeft },
-    { kbdKey: IKbdKey.AltLeft},
+    { kbdKey: IKbdKey.Fn, css: "w-10  text-base"},
+    { kbdKey: IKbdKey.ControlLeft, css: "w-10" },
+    { kbdKey: IKbdKey.AltLeft, css: "w-10"},
     { kbdKey: IKbdKey.MetaLeft, css: "w-12" },
 
-    { kbdKey: IKbdKey.Space, css: "w-50" },
+    { kbdKey: IKbdKey.Space, css: "w-50 text-base" },
 
     { kbdKey: IKbdKey.MetaRight, css: "w-14" },
     { kbdKey: IKbdKey.AltRight },
