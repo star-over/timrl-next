@@ -1,0 +1,78 @@
+import {IKbdKey} from "../interfaces/virtual-key";
+
+export interface IKbdLayoutItem { kbdKey: IKbdKey,  isHome?: true, additionClass?: string, buttonClass?: string}
+export type IKbdLayout = IKbdLayoutItem[][];
+
+export const us: IKbdLayout = [
+  [
+    { kbdKey: IKbdKey.Backquote },
+    { kbdKey: IKbdKey.Digit1 },
+    { kbdKey: IKbdKey.Digit2 },
+    { kbdKey: IKbdKey.Digit3 },
+    { kbdKey: IKbdKey.Digit4 },
+    { kbdKey: IKbdKey.Digit5 },
+    { kbdKey: IKbdKey.Digit6 },
+    { kbdKey: IKbdKey.Digit7 },
+    { kbdKey: IKbdKey.Digit8 },
+    { kbdKey: IKbdKey.Digit9 },
+    { kbdKey: IKbdKey.Digit0 },
+    { kbdKey: IKbdKey.Minus },
+    { kbdKey: IKbdKey.Equal },
+    { kbdKey: IKbdKey.Backspace, additionClass: "w-16 text-base", buttonClass: "bg-zinc-200" },
+  ], [
+    { kbdKey: IKbdKey.Tab, additionClass: "w-16 text-base", buttonClass: "bg-zinc-200" },
+    { kbdKey: IKbdKey.KeyQ },
+    { kbdKey: IKbdKey.KeyW },
+    { kbdKey: IKbdKey.KeyE },
+    { kbdKey: IKbdKey.KeyR },
+    { kbdKey: IKbdKey.KeyT },
+    { kbdKey: IKbdKey.KeyY },
+    { kbdKey: IKbdKey.KeyU },
+    { kbdKey: IKbdKey.KeyI },
+    { kbdKey: IKbdKey.KeyO },
+    { kbdKey: IKbdKey.KeyP },
+    { kbdKey: IKbdKey.BracketLeft },
+    { kbdKey: IKbdKey.BracketRight },
+    { kbdKey: IKbdKey.Backslash },
+  ], [
+    { kbdKey: IKbdKey.CapsLock, additionClass: "w-18 text-base", buttonClass: "bg-zinc-200"  },
+    { kbdKey: IKbdKey.KeyA },
+    { kbdKey: IKbdKey.KeyS },
+    { kbdKey: IKbdKey.KeyD },
+    { kbdKey: IKbdKey.KeyF, isHome: true },
+    { kbdKey: IKbdKey.KeyG },
+    { kbdKey: IKbdKey.KeyH },
+    { kbdKey: IKbdKey.KeyJ, isHome: true},
+    { kbdKey: IKbdKey.KeyK },
+    { kbdKey: IKbdKey.KeyL },
+    { kbdKey: IKbdKey.Semicolon },
+    { kbdKey: IKbdKey.Quote },
+    { kbdKey: IKbdKey.Enter, additionClass: "w-18 text-base", buttonClass: "bg-zinc-200"  },
+  ], [
+    { kbdKey: IKbdKey.ShiftLeft, additionClass: "w-22 text-base", buttonClass: "bg-zinc-200" },
+    { kbdKey: IKbdKey.KeyZ },
+    { kbdKey: IKbdKey.KeyX },
+    { kbdKey: IKbdKey.KeyC },
+    { kbdKey: IKbdKey.KeyV },
+    { kbdKey: IKbdKey.KeyB },
+    { kbdKey: IKbdKey.KeyN },
+    { kbdKey: IKbdKey.KeyM },
+    { kbdKey: IKbdKey.Comma },
+    { kbdKey: IKbdKey.Period },
+    { kbdKey: IKbdKey.Slash },
+    { kbdKey: IKbdKey.ShiftRight, additionClass: "w-24 text-base", buttonClass: "bg-zinc-200" },
+  ], [
+    { kbdKey: IKbdKey.Fn, additionClass: "w-10 text-base", buttonClass: "bg-zinc-200"},
+    { kbdKey: IKbdKey.ControlLeft, additionClass: "w-10", buttonClass: "bg-zinc-200" },
+    { kbdKey: IKbdKey.AltLeft, additionClass: "w-10", buttonClass: "bg-zinc-200"},
+    { kbdKey: IKbdKey.MetaLeft, additionClass: "w-12", buttonClass: "bg-zinc-200" },
+
+    { kbdKey: IKbdKey.Space, additionClass: "w-50 text-base"},
+
+    { kbdKey: IKbdKey.MetaRight, additionClass: "w-14", buttonClass: "bg-zinc-200" },
+    { kbdKey: IKbdKey.AltRight, buttonClass: "bg-zinc-200"},
+    { kbdKey: IKbdKey.ArrowLeft, buttonClass: "bg-zinc-200" },
+    { kbdKey: IKbdKey.ArrowUp, buttonClass: "bg-zinc-200" },
+    { kbdKey: IKbdKey.ArrowRight, buttonClass: "bg-zinc-200" },
+  ],
+];
