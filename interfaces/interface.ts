@@ -30,15 +30,15 @@ export type IHandState = {
 };
 
 export const IFingers = {
-  L1: { hand: ISide.LEFT, part: IPart.F1 },
-  L2: { hand: ISide.LEFT, part: IPart.F2 },
-  L3: { hand: ISide.LEFT, part: IPart.F3 },
-  L4: { hand: ISide.LEFT, part: IPart.F4 },
-  L5: { hand: ISide.LEFT, part: IPart.F5 },
-  R1: { hand: ISide.RIGHT, part: IPart.F1 },
-  R2: { hand: ISide.RIGHT, part: IPart.F2 },
-  R3: { hand: ISide.RIGHT, part: IPart.F3 },
-  R4: { hand: ISide.RIGHT, part: IPart.F4 },
-  R5: { hand: ISide.RIGHT, part: IPart.F5 },
+  L0: { hand: ISide.LEFT, part: IPart.F1 },
+  L1: { hand: ISide.LEFT, part: IPart.F2 },
+  L2: { hand: ISide.LEFT, part: IPart.F3 },
+  L3: { hand: ISide.LEFT, part: IPart.F4 },
+  L4: { hand: ISide.LEFT, part: IPart.F5 },
+  R0: { hand: ISide.RIGHT, part: IPart.F1 },
+  R1: { hand: ISide.RIGHT, part: IPart.F2 },
+  R2: { hand: ISide.RIGHT, part: IPart.F3 },
+  R3: { hand: ISide.RIGHT, part: IPart.F4 },
+  R4: { hand: ISide.RIGHT, part: IPart.F5 },
 };
 export type IFingersKeys = keyof typeof IFingers;

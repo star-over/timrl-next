@@ -3,14 +3,6 @@ import {IKbdKey} from "../interfaces/virtual-key";
 export interface ILngLayoutItem { kbdKey: IKbdKey, symbol: string, shift:boolean }
 export type ILngLayout = ILngLayoutItem[];
 
-export const toLngObject = (lngLayout: ILngLayout) => {
-  return lngLayout.reduce((acc, item) => {
-    acc[item.kbdKey] = item;
-    return acc;
-  }, {} as { [key in IKbdKey]: ILngLayoutItem });
-};
-
-
 export const en:ILngLayout = [
 
   { kbdKey: IKbdKey.Tab, symbol: "tab", shift: false },
