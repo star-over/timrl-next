@@ -15,7 +15,7 @@ export enum IPartState {
   ACTIVE = "ACTIVE",
   INACTIVE = "INACTIVE",
   ERROR = "ERROR",
-  HIDE = "HIDE",
+  INVISIBLE = "INVISIBLE",
 }
 export enum IMoveDirection {
   DOWN = "DOWN",

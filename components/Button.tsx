@@ -6,7 +6,7 @@ const stateMapping = {
   INACTIVE: { bg: "bg-zinc-100", symbol: "text-zinc-500", frame: "border-stone-400" },
   ERROR: { bg: "bg-red-300", symbol: "text-red-900", frame: "border-stone-500" },
   // TODO rename 'hide' mode to invisible
-  HIDE: { bg: "invisible", symbol: "", frame: "" },
+  INVISIBLE: { bg: "invisible", symbol: "", frame: "" },
 };
 
 export interface IButtonProps {
@@ -16,7 +16,7 @@ export interface IButtonProps {
   additionClass?: string;
 }
 
-export const Button: FC<IButtonProps> = ({ state = IPartState.HIDE, symbol = ".", isHome = false, additionClass = "" }) => (
+export const Button: FC<IButtonProps> = ({ state = IPartState.INVISIBLE, symbol = ".", isHome = false, additionClass = "" }) => (
   <>
     <div
       className={`flex flex-grow justify-center rounded-lg border-2
