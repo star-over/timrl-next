@@ -2,7 +2,7 @@ import _ from "lodash";
 import { IPartState } from "../interfaces/interface";
 import { Button } from "./Button";
 import { IKbdLayout, IKbdLayoutItem, kbdUsStandart } from "../data/kbdLayout";
-import { en, ILngLayout } from "../data/lngLayout";
+import { EN_QWERTY, ILngLayout } from "../data/lngLayout";
 
 const gridClass = "flex-col inline-flex";
 const rowClass = "inline-flex flex-nowrap bg-slate-900 overflow-clip";
@@ -53,4 +53,4 @@ const renderGrid = (kbdLayout: IKbdLayout, lngLayout: ILngLayout) => {
     </div>);
 };
 
-export const Grid = () => renderGrid(kbdUsStandart, en);
+export const Grid = () => renderGrid(kbdUsStandart, EN_QWERTY);

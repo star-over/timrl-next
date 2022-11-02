@@ -3,7 +3,7 @@ import {IKbdKey} from "../interfaces/virtual-key";
 export interface ILngLayoutItem { kbdKey: IKbdKey, symbol: string, shift:boolean }
 export type ILngLayout = ILngLayoutItem[];
 
-export const en:ILngLayout = [
+export const EN_QWERTY:ILngLayout = [
 
   { kbdKey: IKbdKey.Tab, symbol: "tab", shift: false },
   { kbdKey: IKbdKey.Backspace, symbol: "del", shift: false },
