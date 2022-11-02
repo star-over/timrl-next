@@ -1,9 +1,10 @@
 import _ from "lodash";
 import { cx } from "cva";
+import { FC } from "react";
 import { IPartState } from "../interfaces/interface";
 import { KbdButton } from "./KbdButton";
-import { IKbdLayout, IKbdLayoutItem, kbdUsStandart } from "../data/kbdLayout";
-import { EN_QWERTY, ILngLayout, ILngLayoutItem } from "../data/lngLayout";
+import { IKbdLayout, IKbdLayoutItem } from "../data/kbdLayout";
+import { ILngLayout, ILngLayoutItem } from "../data/lngLayout";
 
 const makeLngIndex = (lngLayout: ILngLayout) => _(lngLayout)
   .filter((e) => !e.shift)
@@ -41,7 +42,12 @@ const Rows = (layout: IKbdLayout["layout"], lngIndex: _.Dictionary<ILngLayoutIte
   ));
 };
 
-const renderGrid = ({ layout: kbdLayout, css }: IKbdLayout, lngLayout: ILngLayout) => {
+export interface IGridProps {
+  kbdLayout: IKbdLayout;
+  lngLayout: ILngLayout;
+}
+
+export const KbdGrid: FC<IGridProps> = ({ kbdLayout: { layout: kbdLayout, css }, lngLayout }) => {
   const gridClass = "flex-col inline-flex";
   const lngIndex = makeLngIndex(lngLayout);
 
@@ -50,5 +56,3 @@ const renderGrid = ({ layout: kbdLayout, css }: IKbdLayout, lngLayout: ILngLayou
       {Rows(kbdLayout, lngIndex)}
     </div>);
 };
-
-export const KbdGrid = () => renderGrid(kbdUsStandart, EN_QWERTY);
