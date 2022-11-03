@@ -20,11 +20,13 @@ const Row = (keys: IKbdLayoutItem[], lngIndex: _.Dictionary<ILngLayoutItem>) => 
       key={keyId}
     >
       <KbdButton
-        symbol={lngIndex[keyId]?.symbol}
+        // symbol={lngIndex[keyId]?.symbol}
         state={IPartState.INACTIVE}
         isHome={isHome}
         css={buttonCss}
-      />
+      >
+        {lngIndex[keyId]?.symbol}
+      </KbdButton>
     </div>
   ));
 };
