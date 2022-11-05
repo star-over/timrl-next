@@ -2,7 +2,7 @@ import { IKbdKey } from "../interfaces/virtual-key";
 
 export interface IKbdLayoutItem {
   keyId: IKbdKey,
-  isHome?: boolean,
+  homie?: boolean,
   css?: string,
   buttonCss?:
   string
@@ -24,6 +24,26 @@ export const kbdUsStandart: IKbdLayout = {
   name: "US Standart Layout",
   css: "",
   layout: [
+    {
+      rowId: 0,
+      css: "",
+      keys: [
+        { keyId: IKbdKey.Backquote },
+        { keyId: IKbdKey.Digit1 },
+        { keyId: IKbdKey.Digit2 },
+        { keyId: IKbdKey.Digit3 },
+        { keyId: IKbdKey.Digit4 },
+        { keyId: IKbdKey.Digit5 },
+        { keyId: IKbdKey.Digit6 },
+        { keyId: IKbdKey.Digit7 },
+        { keyId: IKbdKey.Digit8 },
+        { keyId: IKbdKey.Digit9 },
+        { keyId: IKbdKey.Digit0 },
+        { keyId: IKbdKey.Minus },
+        { keyId: IKbdKey.Equal },
+        { keyId: IKbdKey.Backspace, css: "w-16 text-base", buttonCss: "bg-zinc-200"  },
+      ],
+    },
     {
       rowId: 1,
       css: "",
@@ -52,10 +72,10 @@ export const kbdUsStandart: IKbdLayout = {
         { keyId: IKbdKey.KeyA },
         { keyId: IKbdKey.KeyS },
         { keyId: IKbdKey.KeyD },
-        { keyId: IKbdKey.KeyF, isHome: true },
+        { keyId: IKbdKey.KeyF, homie: true },
         { keyId: IKbdKey.KeyG },
         { keyId: IKbdKey.KeyH },
-        { keyId: IKbdKey.KeyJ, isHome: true },
+        { keyId: IKbdKey.KeyJ, homie: true },
         { keyId: IKbdKey.KeyK },
         { keyId: IKbdKey.KeyL },
         { keyId: IKbdKey.Semicolon },

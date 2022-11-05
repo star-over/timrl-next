@@ -11,7 +11,7 @@ export enum IPart {
   F5 = "F5",
   PM = "PM",
 }
-export enum IFingersKeys {
+export enum IFingersIds {
   L0 = "L0",
   L1 = "L1",
   L2 = "L2",
@@ -40,15 +40,15 @@ export type IHandState = {
   [key in IPart]?: IPartState;
 };
 export const fingers = {
-  [IFingersKeys.L1]: { hand: ISide.LEFT, part: IPart.F2 },
-  [IFingersKeys.L2]: { hand: ISide.LEFT, part: IPart.F3 },
-  [IFingersKeys.L0]: { hand: ISide.LEFT, part: IPart.F1 },
-  [IFingersKeys.L3]: { hand: ISide.LEFT, part: IPart.F4 },
-  [IFingersKeys.L4]: { hand: ISide.LEFT, part: IPart.F5 },
-  [IFingersKeys.R0]: { hand: ISide.RIGHT, part: IPart.F1 },
-  [IFingersKeys.R1]: { hand: ISide.RIGHT, part: IPart.F2 },
-  [IFingersKeys.R2]: { hand: ISide.RIGHT, part: IPart.F3 },
-  [IFingersKeys.R3]: { hand: ISide.RIGHT, part: IPart.F4 },
-  [IFingersKeys.R4]: { hand: ISide.RIGHT, part: IPart.F5 },
+  [IFingersIds.L1]: { hand: ISide.LEFT, part: IPart.F2 },
+  [IFingersIds.L2]: { hand: ISide.LEFT, part: IPart.F3 },
+  [IFingersIds.L0]: { hand: ISide.LEFT, part: IPart.F1 },
+  [IFingersIds.L3]: { hand: ISide.LEFT, part: IPart.F4 },
+  [IFingersIds.L4]: { hand: ISide.LEFT, part: IPart.F5 },
+  [IFingersIds.R0]: { hand: ISide.RIGHT, part: IPart.F1 },
+  [IFingersIds.R1]: { hand: ISide.RIGHT, part: IPart.F2 },
+  [IFingersIds.R2]: { hand: ISide.RIGHT, part: IPart.F3 },
+  [IFingersIds.R3]: { hand: ISide.RIGHT, part: IPart.F4 },
+  [IFingersIds.R4]: { hand: ISide.RIGHT, part: IPart.F5 },
 };
 // export type IFingersKeys = keyof typeof IFingers;

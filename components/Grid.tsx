@@ -20,7 +20,7 @@ const renderGrid = (kbdLayout: IKbdLayout, lngLayout: ILngLayout) => {
   // TODO: move it out from the scope
   // TODO: make this without separate export interface
   const renderRow = (keys: IKbdLayoutItem[]) =>
-    keys.map(({ keyId, isHome=false, css = "", buttonCss = "" }) => (
+    keys.map(({ keyId, homie: isHome=false, css = "", buttonCss = "" }) => (
       <div
         className={`${keyClass} ${css}`}
         key={keyId}
