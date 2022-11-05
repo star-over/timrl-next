@@ -31,7 +31,7 @@ const Classes = cva("flex flex-grow justify-center rounded-lg border-2",
         [IFingersIds.R0]: "bg-stone-200",
       },
       base: {
-        true: "border-4 border-zinc-500",
+        true: "border-4 border-zinc-900/50",
       },
     },
     defaultVariants: { state: IPartState.INACTIVE },
